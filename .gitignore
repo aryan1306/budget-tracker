@@ -1,0 +1,6 @@
+*.env
+db-data
+redis-data
+*.lock
+pnpm-lock.yaml
+node_modules
