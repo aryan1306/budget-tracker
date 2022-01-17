@@ -1,26 +1,32 @@
-import { BaseEntity, Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from "typeorm";
+import {
+	BaseEntity,
+	Column,
+	CreateDateColumn,
+	Entity,
+	PrimaryGeneratedColumn,
+} from "typeorm";
 // import { nanoid } from 'nanoid'
 
 @Entity()
-export class User extends BaseEntity{
-    @PrimaryGeneratedColumn()
-    id: number;
+export class User extends BaseEntity {
+	@PrimaryGeneratedColumn()
+	id: number;
 
-    @Column()
-    name: string;
+	@Column()
+	name: string;
 
-    @Column()
-    email: string;
+	@Column()
+	email: string;
 
-    @Column()
-    password: string;
+	@Column()
+	password: string;
 
-    @CreateDateColumn()
-    createdAt: Date;
+	@CreateDateColumn()
+	createdAt: Date;
 
-    // TODO prod
-    // @BeforeInsert()
-    // generate() {
-    //     this.id = nanoid()
-    // }
+	// TODO prod
+	// @BeforeInsert()
+	// generate() {
+	//     this.id = nanoid()
+	// }
 }
